@@ -1,14 +1,35 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { toast } from "@/components/ui/sonner";
 import { Mail, MessageCircle, Send, Instagram, Youtube, Twitter, LinkedinIcon, FacebookIcon } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
-    alert("Thank you for your message! I'll get back to you within 24 hours.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const form = new FormData(e.currentTarget);
+      const response = await fetch("https://formspree.io/f/xpqoeoyy", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: form,
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      setFormData({ name: "", email: "", message: "" });
+      toast.success("Message sent! I'll get back to you within 24 hours.");
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -26,9 +47,11 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
+            <input type="hidden" name="_subject" value="New message from cinematic canvas studio" />
             <div>
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 required
                 value={formData.name}
@@ -39,6 +62,7 @@ const ContactSection = () => {
             <div>
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
                 required
                 value={formData.email}
@@ -48,6 +72,7 @@ const ContactSection = () => {
             </div>
             <div>
               <textarea
+                name="message"
                 placeholder="Tell me about your project..."
                 rows={5}
                 required
@@ -56,9 +81,13 @@ const ContactSection = () => {
                 className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
               />
             </div>
-            <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="btn-primary w-full flex items-center justify-center gap-2"
+            >
               <Send className="w-4 h-4" />
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
 
