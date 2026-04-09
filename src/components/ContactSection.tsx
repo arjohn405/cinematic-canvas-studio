@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MessageCircle, Send, Instagram, Youtube, Twitter } from "lucide-react";
+import { Mail, MessageCircle, Send, Instagram, Youtube, Twitter, LinkedinIcon, FacebookIcon } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -81,10 +81,10 @@ const ContactSection = () => {
             <div className="glass-card p-6">
               <h3 className="font-display font-semibold mb-4">Follow Me</h3>
               <div className="flex gap-3">
-                {[Instagram, Youtube, Twitter].map((Icon, i) => (
+                {[ FacebookIcon, Instagram, LinkedinIcon].map((Icon, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href="https://www.linkedin.com/in/arjohn-capucion/"
                     className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                   >
                     <Icon className="w-5 h-5 text-primary" />

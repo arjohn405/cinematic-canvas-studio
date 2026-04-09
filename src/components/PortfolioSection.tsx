@@ -4,12 +4,53 @@ import { Play, ExternalLink } from "lucide-react";
 const categories = ["All", "Vlogs", "Shorts / Reels", "Podcasts", "Business"];
 
 const projects = [
-  { title: "Travel Vlog Series", category: "Vlogs", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", type: "video" },
-  { title: "Product Launch Reel", category: "Shorts / Reels", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", type: "video" },
-  { title: "Tech Podcast S2", category: "Podcasts", thumbnail: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&q=80", type: "audio" },
-  { title: "Brand Story Film", category: "Business", thumbnail: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80", type: "video" },
-  { title: "Fitness Shorts", category: "Shorts / Reels", thumbnail: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80", type: "video" },
-  { title: "Daily Vlog Edit", category: "Vlogs", thumbnail: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80", type: "video" },
+
+  // These are placeholder projects. Replace with real data and thumbnails.
+  // Category: Shorts / Reels
+  { title: "Makeup Transformation", 
+    category: "Shorts / Reels", 
+    thumbnail: "thumbnails/pr1.png", 
+    type: "video" },
+
+  { title: "Product Launch Reel", 
+    category: "Shorts / Reels", 
+    thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", 
+    type: "video" },
+
+  // Category: Vlogs
+  { title: "Jojowain o Totropahin Challenge!", 
+    category: "Vlogs", 
+    thumbnail: "thumbnails/v1.png", 
+    type: "video" },
+  
+  { title: "Singapore Travel Vlog ", 
+    category: "Vlogs", 
+    thumbnail: "thumbnails/v2.png", 
+    type: "video" },
+
+  { title: "Bohol Vlog ", 
+    category: "Vlogs", 
+    thumbnail: "thumbnails/v3.png", 
+    type: "video" },
+ 
+  // Category: Podcasts
+  { title: "Tech Podcast S2", 
+    category: "Podcasts", 
+    thumbnail: "thumbnails/p1.png", 
+    type: "audio" },
+  
+    { title: "Horror Podcast ", 
+    category: "Podcasts", 
+    thumbnail: "thumbnails/p2.png", 
+    type: "audio" },
+
+  // Category: Business/Brand
+  { title: "Brand Story Film", 
+    category: "Business", 
+    thumbnail: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80", 
+    type: "video" },
+  
+ 
 ];
 
 const PortfolioSection = () => {
