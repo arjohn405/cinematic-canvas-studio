@@ -67,11 +67,11 @@ const ContactSection = () => {
             <div className="glass-card p-6">
               <h3 className="font-display font-semibold mb-4">Quick Connect</h3>
               <div className="space-y-4">
-                <a href="mailto:hello@studioedit.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:backup.arjohn@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="w-5 h-5 text-primary" />
-                  hello@studioedit.com
+                  backup.arjohn@gmail.com
                 </a>
-                <a href="#" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="https://wa.me/09665367937" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <MessageCircle className="w-5 h-5 text-primary" />
                   WhatsApp / Telegram
                 </a>
@@ -96,7 +96,7 @@ const ContactSection = () => {
             <div className="glass-card p-6">
               <h3 className="font-display font-semibold mb-2">Response Time</h3>
               <p className="text-sm text-muted-foreground">
-                I typically respond within <span className="text-foreground font-medium">24 hours</span>. For urgent projects, reach out via WhatsApp.
+                I'm always working and respond within <span className="text-foreground font-medium">24 hours</span>. For urgent projects, reach out via WhatsApp.
               </p>
             </div>
           </div>

@@ -5,7 +5,7 @@ const categories = ["All", "Vlogs", "Shorts / Reels", "Podcasts", "Business"];
 
 const projects = [
   { title: "Travel Vlog Series", category: "Vlogs", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", type: "video" },
-  { title: "Product Launch Reel", category: "Shorts / Reels", thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600&q=80", type: "video" },
+  { title: "Product Launch Reel", category: "Shorts / Reels", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", type: "video" },
   { title: "Tech Podcast S2", category: "Podcasts", thumbnail: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&q=80", type: "audio" },
   { title: "Brand Story Film", category: "Business", thumbnail: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80", type: "video" },
   { title: "Fitness Shorts", category: "Shorts / Reels", thumbnail: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80", type: "video" },

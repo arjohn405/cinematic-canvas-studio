@@ -3,16 +3,16 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "$49",
+    price: "$99",
     desc: "Perfect for short-form content",
     features: ["Videos up to 3 min", "Basic color correction", "1 revision round", "48-hour delivery", "Export in 1 format"],
     popular: false,
   },
   {
     name: "Standard",
-    price: "$149",
+    price: "$129",
     desc: "For YouTube & podcast creators",
-    features: ["Videos up to 15 min", "Color grading & effects", "2 revision rounds", "Thumbnails included", "Multi-format export"],
+    features: ["Videos up to 15 min", "Color grading & effects", "3 revision rounds", "Thumbnails included", "Multi-format export"],
     popular: true,
   },
   {
